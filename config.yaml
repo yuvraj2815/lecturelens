@@ -1,0 +1,28 @@
+# LectureLens configuration. Every key is optional; defaults live in lecturelens/config.py.
+runtime:
+  prefer: qnn            # qnn (NPU) or cpu
+  backend_path: QnnHtp.dll
+
+transcribe:
+  backend: faster-whisper   # faster-whisper | whisper-cpp | qnn
+  model: base
+  language: null            # e.g. en, hi
+  whisper_cpp_bin: whisper-cli
+  whisper_cpp_model: models/ggml-base.bin
+
+embedding:
+  model_path: models/minilm/model.onnx
+  tokenizer_path: models/minilm/tokenizer.json
+  max_len: 128
+
+llm:
+  base_url: http://localhost:11434/v1   # any local OpenAI-compatible server
+  model: llama3.2:3b
+  temperature: 0.2
+  max_tokens: 1200
+
+index:
+  dir: data/index
+  chunk_chars: 900
+  overlap_chars: 150
+  top_k: 4

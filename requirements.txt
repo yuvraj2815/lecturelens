@@ -1,0 +1,10 @@
+numpy>=1.26
+pyyaml>=6.0
+requests>=2.31
+pypdf>=4.0
+tokenizers>=0.15
+huggingface_hub>=0.23
+gradio>=4.0
+# ONNX Runtime: QNN build on Windows ARM64 (Snapdragon), standard build elsewhere
+onnxruntime-qnn; sys_platform == "win32" and platform_machine == "ARM64"
+onnxruntime>=1.18; sys_platform != "win32" or platform_machine != "ARM64"

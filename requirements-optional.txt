@@ -1,0 +1,2 @@
+# CPU speech-to-text baseline. May lack Windows ARM64 wheels; use the whisper-cpp backend there.
+faster-whisper>=1.0

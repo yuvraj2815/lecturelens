@@ -1,0 +1,15 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.env
+models/
+data/
+outputs/
+*.onnx
+*.bin
+*.wav
+*.mp3
+.DS_Store
